@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/fabe63b3-2065-449c-a773-c00bacdf1f17/resourceGroups/Kandidatarbete/providers/Microsoft.Web/sites/MajasTestApp",
+    "appService.deploySubpath": "."
+}
