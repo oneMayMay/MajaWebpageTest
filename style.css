@@ -29,7 +29,7 @@ body{
     color: white;
     /* 
     font-family = arial;
-    
+
     */
 }
 
@@ -38,6 +38,10 @@ nav {
     height: 60px;
     background-color: white;
 
+}
+
+menu {
+    float: left;
 }
 
 h1 {
