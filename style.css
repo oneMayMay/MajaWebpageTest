@@ -5,8 +5,8 @@
     padding: 0;
 }
 div {
-    width: 200px;
-    height: 50px;
+    width: 100px;
+    height: 20px;
     background-color: white;
     border: solid black;
     border-width: 2px;
@@ -37,6 +37,11 @@ h1 {
     font-size:large;
     font-weight: 15vw;
 }
+a { /* this sets for all a:s which is not good */
+    text-decoration: underline;
+    color: white;
+    font-weight: bold;
+}
 
 /*------------- THE DROP DOWN MENU ---------------------*/
 nav {
@@ -57,7 +62,7 @@ nav ul {
 }
 
 nav ul li {
-    float: right;
+    float: right; /* this says that the list is listed from left to right*/
     list-style: none;
     position: relative; /* thanx to this we can have 
     position absolut in the sub items*/
@@ -69,7 +74,7 @@ nav ul li a {
     color: #222;
     font-size: 14px;
     padding: 22px 14px;
-    text-decoration: none;
+    text-decoration: none; /* This is not needed */ 
 
 }
 
@@ -90,8 +95,10 @@ nav ul li:hover ul {
 }
 
 nav ul li ul li {
-    width: 120px; /* how wide the dropdown box is*/
+    position: relative;
+    width: 180px; /* how wide the dropdown box is*/
     border-radius: 4px;
+    
 }
 
 nav ul li ul li a {
