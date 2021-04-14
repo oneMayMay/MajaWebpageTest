@@ -4,30 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Welcome to this webpage</title>
 </head>
 <body>
+    <header>
+        <img id="headpic" src="https://www.olsbergs.se/wp-content/themes/olsbergs/assets/img/logo.svg">
+        Welcome to Olsbergs applications for online crane monitoring
+
+        <nav>
+            <p>MENU</p>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Log out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Here we can create the log-in square -->
     <h1>
-        Här har vi en titel
+        Log in to access this webpage:
     </h1>
-    <p>And here we can write stuff</p>
-    <p>You can write even</p>
-    <p>Pull request test</p>
-    <p>hej</p>
-    <a href="ManageCranes.html">Click here to come to manage cranes</a>
+  
+    <a href="ManageCranes.html">
+        <div>
+            <p>Click here to come to manage cranes</p>
+
+        </div>
+
+    </a>
     <br>
     <a href="Views/ManageUsers.vue">Click here to get to manage users (vue)</a>
 </body>
 </html>
 
+<footer>
+    <p>Contact us </p>
+    <p>Information about Olsbergs </p> <!-- Link to Olsbergs home page-->
+</footer>
 
 <style scoped>
-    body{
-        background-color: rgb(144, 25, 17);
-        color: white;
-    }
-    h1 {
-        font-size:large;
-        font-weight: 15vw;
-    }
+   
+   /* Har lagt in allt detta i separata style.css istället */
+    
 </style>
