@@ -37,10 +37,9 @@ h1 {
     font-size:large;
     font-weight: 15vw;
 }
-a { /* this sets for all a:s which is not good */
-    text-decoration: underline;
-    color: white;
-    font-weight: bold;
+
+a {
+    text-decoration: none;
 }
 
 /*------------- THE DROP DOWN MENU ---------------------*/
