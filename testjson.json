@@ -1,4 +1,5 @@
 {
+  "testvariable": "test",
     "deviceId": "DeviceTwinTest",
     "etag": "AAAAAAAAAAI=",
     "deviceEtag": "OTYzNTc1OTU4",
