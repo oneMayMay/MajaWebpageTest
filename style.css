@@ -137,6 +137,7 @@ nav ul li ul li a {
 
 nav ul li ul li a:hover {
   background-color: #f3f3f3;
+  margin-right: 10vw;
 }
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */

@@ -9,18 +9,15 @@
 </head>
 <body>
     <header>
-
         <nav>
-            
             <img id="headpic" src="https://www.olsbergs.se/wp-content/themes/olsbergs/assets/img/logo.svg">
             <ul>
-                <li><a href="#">MENU</a>
-                    <ul>
-                        <li><a href="#">myself</a></li>
-                        <li><a href="#">yourself</a></li>
-                        <li><a href="#">the others</a></li>
+                <li><a id="menu" href="#">MENU</a>
+                    <ul id="dropdownmenu">
+                        <li><a class="dropdownlist" href="#">myself</a></li>
+                        <li><a class="dropdownlist" href="#">yourself</a></li>
+                        <li><a class="dropdownlist" href="#">the others</a></li>
                     </ul>
-               
                 </li>
                 <li><a href="#"> Here is your user name</a></li>
                 <!-- 
@@ -30,13 +27,10 @@
             </ul>
         </nav>
     </header>
-
-    Go back to <a href="index.html"> home page</a>
-    
-    <h1>
-        Manage cranes
-    </h1>
-   <p>Here you can manage cranes</p>
-    
+    <div class="sidebar">
+            <a>Go back to </a> <a href="index.html"> home page</a>
+            <a>Manage Cranes</a>
+            <p>Here you can manage cranes</p>
+        </div>
 </body>
 </html>
