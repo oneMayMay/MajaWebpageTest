@@ -131,12 +131,11 @@ nav ul li:hover ul {
 }
 
 /* the dropdown list */
-nav ul li ul li {
+nav ul li ul ul {
   position: relative;
   width: 6.8vw; /* how wide the dropdown box is*/
   border-radius: 0.8vw;
   padding: 0.5vw 0.1vw; /* padding between the (around each) objects*/
-  
 }
 
 /* The text objects in the dropdown-list*/
