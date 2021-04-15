@@ -79,10 +79,11 @@ a {
 }
 
 /*------------- THE DROP DOWN MENU ---------------------*/
+/* the top bar where the logo, "username" and "menu" is located */
 nav {
   width: 100%;
   height: 5vw;
-  background-color: white; 
+  /* background-color: white; */
 }
 
 #logo {
@@ -95,7 +96,7 @@ nav {
 }
 
 /* The Top Bar list in genereal no matter what is in it*/
-nav ul li {
+.GeneralTopBar {
   float: right; /* this says that the list is listed from left to right*/
   list-style: none;
   position: relative; /* thanx to this we can have 
@@ -103,25 +104,26 @@ nav ul li {
   padding: 0vw 1vw;
 }
 
-/* The things that are in the Top Bar individualy */
-.InTopBar {
+/* The things that are in the Top Bar individualy (menu and "userName") */
+.InGeneralTopBar {
   display: block;
   font-family: arial;
   color: #222;
   font-weight: bold;
-  font-size: 1.8vw;
+  font-size: 1.5vw;
   padding: 1vw 1vw; /* each object get padding around it (vertical horisontal) */
-  text-decoration: none; /* This is not needed */
+  /* text-decoration: none;  This is not needed */
 }
 
 /* the dropdown box/"background" */
 nav ul li ul {
   display: none;
   position: absolute;
-  background-color: #fff;
-  padding: 0.5vw; /* tells us the padding around the grey hovering */
+  background-color: #fff; /* color of the dropdown */
+  padding: 0.5vw; /* tells us the padding around all item as a whole in the dropdown */
   border-radius: 0vw 0vw 0.5vw 0.5vw; /* makes the dropdown have rounded
     corners */
+    
 }
 
 /*When you hover over the list we activate the "ul" within the list*/
@@ -129,19 +131,25 @@ nav ul li:hover ul {
   display: block;
 }
 
+/* the dropdown list */
 nav ul li ul li {
   position: relative;
-  width: 9vw; /* how wide the dropdown box is*/
+  width: 6.8vw; /* how wide the dropdown box is*/
   border-radius: 0.8vw;
+  padding: 0.5vw 0.1vw; /* padding between the (around each) objects*/
+  
 }
 
-nav ul li ul li a {
-  padding: 0.5vw 0.8vw; /* the padding of the dropdown*/
+/* The text objects in the dropdown-list*/
+.dropdownlist {
+    text-decoration: none;
+    color: #222;
+  padding: 0.3vw 0.8vw; /* the padding around each text-item in the dropdown*/
 }
 
-nav ul li ul li a:hover {
-  background-color: #f3f3f3;
-  margin-right: 10vw;
+.dropdownlist:hover {
+  background-color: #f3f3f3; /* When you hover the text gets grey around it*/
+  /* margin-right: 100vw;*/
 }
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
