@@ -1,112 +1,161 @@
-@import 'https://fonts.googleapis.com/css?family=Pacifico|Dosis';
+@import "https://fonts.googleapis.com/css?family=Pacifico|Dosis";
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 div {
-    width: 100px;
-    height: 20px;
-    background-color: white;
-    border: solid black;
-    border-width: 2px;
-    color: black;
+  width: 200px;
+  height: 50px;
+  /* background-color: white; */
+  border: solid black;
+  border-width: 2px;
+  color: black;
 }
 
-header{
-    background-color:grey;
-    padding: 15px;
-    color: black;
+header {
+  /*background-color:grey;*/
+  padding: 15px;
+  color: black;
 }
 
 footer {
-    background-color: grey;
-    color: black;
+  /*background-color: grey;*/
+  color: black;
 }
 
-body{
+body {
+  background: url(https://www.olsbergs.se/wp-content/themes/olsbergs/assets/img/olsbergs-pattern.png)
+    repeat #ebebeb;
+  /*background-color: rgb(144, 25, 17);*/
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 10vw;
     background-color: rgb(144, 25, 17);
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  /* Sidebar links */
+  .sidebar a {
+    display: block;
     color: white;
-    /* 
-    font-family = arial;
-
-    */
-}
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  /* Active/current link */
+  .sidebar a.active {
+    background-color: rgb(192, 38, 27);;
+    color: white;
+  }
+  
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    background-color: rgb(192, 38, 27);
+    color: white;
+  }
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  div.content {
+    margin-left: 10vw;
+    padding: 1vw 2vw;
+    height: 100%;
+  }
 
 h1 {
-    font-size:large;
-    font-weight: 15vw;
+  font-size: large;
+  font-weight: 15vw;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /*------------- THE DROP DOWN MENU ---------------------*/
 nav {
-    width: 100%;
-    height: 60px;
-    background-color: white;
-
+  width: 100%;
+  height: 60px;
+  /* background-color: white; */
 }
 
 nav img {
-    
-    float: left;
-    padding: 10px 20px;
+  float: left;
+  padding: 10px 20px;
 }
 
 nav ul {
-    float: right;
+  float: right;
 }
 
 nav ul li {
-    float: right; /* this says that the list is listed from left to right*/
-    list-style: none;
-    position: relative; /* thanx to this we can have 
+  float: right; /* this says that the list is listed from left to right*/
+  list-style: none;
+  position: relative; /* thanx to this we can have 
     position absolut in the sub items*/
 }
 
 nav ul li a {
-    display: block;
-    font-family: arial;
-    color: #222;
-    font-size: 14px;
-    padding: 22px 14px;
-    text-decoration: none; /* This is not needed */ 
-
+  display: block;
+  font-family: arial;
+  color: #222;
+  font-size: 14px;
+  padding: 22px 14px;
+  text-decoration: none; /* This is not needed */
 }
 
 /* the dropdown box/"background" */
 nav ul li ul {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    padding: 10px; /* tells us the padding around the grey hovering */
-    border-radius: 0px 0px 4px 4px; /* makes the dropdown have rounded
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  padding: 10px; /* tells us the padding around the grey hovering */
+  border-radius: 0px 0px 4px 4px; /* makes the dropdown have rounded
     corners */
-
 }
 
 /*When you hover over the list we activate the "ul" within the list*/
 nav ul li:hover ul {
-    display: block;
+  display: block;
 }
 
 nav ul li ul li {
-    position: relative;
-    width: 180px; /* how wide the dropdown box is*/
-    border-radius: 4px;
-    
+  position: relative;
+  width: 180px; /* how wide the dropdown box is*/
+  border-radius: 4px;
 }
 
 nav ul li ul li a {
-    padding: 8px 14px; /* the padding of the dropdown*/
+  padding: 8px 14px; /* the padding of the dropdown*/
 }
 
 nav ul li ul li a:hover {
-    background-color: #f3f3f3;
+  background-color: #f3f3f3;
 }
 
-/*----------------- END OF DROP DOWN MENU --------------------*/
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
 
+/*----------------- END OF DROP DOWN MENU --------------------*/
