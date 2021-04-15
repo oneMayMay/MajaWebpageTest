@@ -1,0 +1,119 @@
+{
+    "deviceId": "DeviceTwinTest",
+    "etag": "AAAAAAAAAAI=",
+    "deviceEtag": "OTYzNTc1OTU4",
+    "status": "enabled",
+    "statusUpdateTime": "0001-01-01T00:00:00Z",
+    "connectionState": "Disconnected",
+    "lastActivityTime": "0001-01-01T00:00:00Z",
+    "cloudToDeviceMessageCount": 0,
+    "authenticationType": "sas",
+    "x509Thumbprint": {
+      "primaryThumbprint": null,
+      "secondaryThumbprint": null
+    },
+    "modelId": "",
+    "version": 3,
+    "properties": {
+      "desired": {
+        "DA26": {
+          "updateVersion": "1.1.0",
+          "minpos": {
+            "a": 666,
+            "b": 200,
+            "c": 210,
+            "d": 210,
+            "e": 200,
+            "f": 250
+          },
+          "imax": 10,
+          "prop": 1,
+          "int": 2,
+          "deriv": 3
+        },
+        "OCC": {
+          "updateVersion": "3.2.1",
+          "gyttja": false
+        },
+        "$metadata": {
+          "$lastUpdated": "2020-12-16T12:41:29.5693685Z",
+          "$lastUpdatedVersion": 2,
+          "DA26": {
+            "$lastUpdated": "2020-12-16T12:41:29.5693685Z",
+            "$lastUpdatedVersion": 2,
+            "updateVersion": {
+              "$lastUpdated": "2020-12-16T12:41:29.5693685Z",
+              "$lastUpdatedVersion": 2
+            },
+            "minpos": {
+              "$lastUpdated": "2020-12-16T12:41:29.5693685Z",
+              "$lastUpdatedVersion": 2,
+              "a": {
+                "$lastUpdated": "2020-12-16T12:41:29.5693685Z",
+                "$lastUpdatedVersion": 2
+              },
+              "b": {
+                "$lastUpdated": "2020-12-16T12:41:29.5693685Z",
+                "$lastUpdatedVersion": 2
+              },
+              "c": {
+                "$lastUpdated": "2020-12-16T12:41:29.5693685Z",
+                "$lastUpdatedVersion": 2
+              },
+              "d": {
+                "$lastUpdated": "2020-12-16T12:41:29.5693685Z",
+                "$lastUpdatedVersion": 2
+              },
+              "e": {
+                "$lastUpdated": "2020-12-16T12:41:29.5693685Z",
+                "$lastUpdatedVersion": 2
+              },
+              "f": {
+                "$lastUpdated": "2020-12-16T12:41:29.5693685Z",
+                "$lastUpdatedVersion": 2
+              }
+            },
+            "imax": {
+              "$lastUpdated": "2020-12-16T12:41:29.5693685Z",
+              "$lastUpdatedVersion": 2
+            },
+            "prop": {
+              "$lastUpdated": "2020-12-16T12:41:29.5693685Z",
+              "$lastUpdatedVersion": 2
+            },
+            "int": {
+              "$lastUpdated": "2020-12-16T12:41:29.5693685Z",
+              "$lastUpdatedVersion": 2
+            },
+            "deriv": {
+              "$lastUpdated": "2020-12-16T12:41:29.5693685Z",
+              "$lastUpdatedVersion": 2
+            }
+          },
+          "OCC": {
+            "$lastUpdated": "2020-12-16T12:41:29.5693685Z",
+            "$lastUpdatedVersion": 2,
+            "updateVersion": {
+              "$lastUpdated": "2020-12-16T12:41:29.5693685Z",
+              "$lastUpdatedVersion": 2
+            },
+            "gyttja": {
+              "$lastUpdated": "2020-12-16T12:41:29.5693685Z",
+              "$lastUpdatedVersion": 2
+            }
+          }
+        },
+        "$version": 2
+      },
+      "reported": {
+        "$metadata": {
+          "$lastUpdated": "2020-12-16T12:38:38.6266841Z"
+        },
+        "$version": 1
+      }
+    },
+    "capabilities": {
+      "iotEdge": false
+    }
+  }
+  
