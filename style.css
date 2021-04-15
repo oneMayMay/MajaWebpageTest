@@ -140,15 +140,17 @@ nav ul li ul ul {
 
 /* The text objects in the dropdown-list*/
 .dropdownlist {
-    text-decoration: none;
-    color: #222;
-  padding: 0.3vw 0.8vw; /* the padding around each text-item in the dropdown*/
+  text-decoration: none;
+  color: #222;
+  padding: 0.5vw 0.8vw; /* the padding around each text-item in the dropdown*/
 }
 
 .dropdownlist:hover {
   background-color: #f3f3f3; /* When you hover the text gets grey around it*/
   /* margin-right: 100vw;*/
 }
+
+/*----------------- END OF DROP DOWN MENU --------------------*/
 
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
@@ -169,5 +171,3 @@ nav ul li ul ul {
       float: none;
     }
   }
-
-/*----------------- END OF DROP DOWN MENU --------------------*/

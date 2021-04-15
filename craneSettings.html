@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Welcome to this webpage</title>
+</head>
+<body>
+    <header>
+        <img id="headpic" src="https://www.olsbergs.se/wp-content/themes/olsbergs/assets/img/logo.svg">
+        Welcome to Olsbergs applications for online crane monitoring
+    </header>
+    <div class="sidebar">
+        <!-- Here we can create the log-in square -->
+            <a class="goback">Go back</a>
+            <a href="ManageCranes.html">Manage Cranes</a>
+            <a href="ManagePeople.html">Manage people</a>
+    </div>
+    <div id="craneJSON">
+
+    </div>
+    <footer>
+        <p>Contact us </p>
+        <p>Information about Olsbergs </p> <!-- Link to Olsbergs home page-->
+    </footer>
+</body>
+
+
+<script type="text/javascript">
+var jsontest = {    // Här ska den riktiga JSONEN laddas in
+    "Employee": {"1": "hej",
+                "2": "nej"},
+    "crane": "crane"
+}
+    var mainElement = document.getElementById("craneJSON");
+    //var jsonVar = getJSON("testjson2.json");
+    //console.log(jsonVar);
+    //var strjson = JSON.stringify(jsonVar, null, 2);
+    //for (index = 0; index<=length.jsontest; i++){
+    //    var listItem = document.createElement("p");
+    //    var listValue = document.createTextNode("The " + index + " is " + jsontest)
+    //    listItem.appendChild(listValue)
+    //    mainElement.appendChild(listItem);
+    //}
+    mainElement.innerHTML = JSON.stringify(jsontest, null, '\t');
+</script>
+
+<style scoped>
+    #craneJSON{
+        margin-left: 15vw;
+        color:black;
+    }
+</style>
