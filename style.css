@@ -3,37 +3,73 @@
 * {
   margin: 0;
   padding: 0;
-}
+} 
 
+body {
+  background: url(https://www.olsbergs.se/wp-content/themes/olsbergs/assets/img/olsbergs-pattern.png)
+    repeat #ebebeb;
+  /*background-color: rgb(144, 25, 17);*/
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+  height: 100vh;
+  padding-bottom: 2.5vw;
+}
+.page-container{
+  display:grid;
+  height:100vh;
+  grid-template-rows:5% 90% 5%;
+  grid-template-columns:13% 87%;
+  grid-template-areas: 
+    "header header"
+    "sidebar mainbody"
+    "footer footer";
+}
+.grid{
+  display:grid;
+  grid-template-areas:
+  "top"
+  "middle"
+  "bottom";
+}
+.grid.title{
+  grid-area: top;
+}
+.grid.listofCranes{
+  grid-area: middle;
+}
+.grid.blank{
+  grid-area:bottom;
+}
 header {
   background-color:white;
   width: 100%;
-  height: 4vh;
-  /* padding: 1vw;*/ 
-  position: fixed;
+  height: 100%;
   color: black;
+  grid-area: header;
 }
-
-
+.wrap{
+  height:100%;
+  color:black;
+  text-align: center;
+  padding-bottom: 2.5vh;
+  grid-area: mainbody;
+  height:70vh;
+}
 footer{
   color: black;
-  background-color: #fff;
-  position: absolute;
+  background-color:white;
   bottom: 0;
   width: 100%;
   /* height: 2.5vh; atm it will have the height of the content*/ 
   text-align:center;
+  grid-area: footer;
 }
-
 .sidebar {
-    margin-top: 4vh;
-    padding: 0;
-    width: 10vw;
-    background-color: rgb(144, 25, 17);
-    position: fixed;
-    height: 96vh;
-    overflow: auto;
-  }
+  background-color: rgb(144, 25, 17);
+  overflow: hidden;
+  height:100%;
+  grid-area: sidebar;
+}
   
   /* Sidebar links */
   .sidebar a {
@@ -79,16 +115,12 @@ body {
 } 
 
 
-.page-container {
+/* .page-container {
   position: relative;
   min-height: 100vh;
-}
+} */
 
-.wrap {
-  padding-bottom: 2.5vh;
-}
-
-.grid {
+/* .grid {
   background-color: pink;
   padding-top: 4vh;
   padding-left: 10vw;
@@ -96,11 +128,11 @@ body {
   display: grid;
   grid-template-rows: 20% 50% 30%;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-areas:
+   grid-template-areas:
   "topL top topR"
   "middle middle middle"
-  "hej hej hej";
-}
+  "hej hej hej"; 
+}  */
 
 .title {
   background-color: blue;
@@ -110,7 +142,6 @@ body {
 .listOfCranes {
   background-color:green;
   grid-area: top;
-  
 }
 
 .blank {
