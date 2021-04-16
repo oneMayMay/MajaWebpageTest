@@ -7,36 +7,31 @@
 
 header {
   background-color:white;
-  padding: 1vw;
+  width: 100%;
+  height: 4vh;
+  /* padding: 1vw;*/ 
+  position: fixed;
   color: black;
 }
 
-footer { 
-  color: black;
-}
 
-body {
-  background: url(https://www.olsbergs.se/wp-content/themes/olsbergs/assets/img/olsbergs-pattern.png)
-    repeat #ebebeb;
-  /*background-color: rgb(144, 25, 17);*/
-  color: white;
-  font-family: "Source Sans Pro", sans-serif;
-}
 footer{
+  color: black;
+  background-color: #fff;
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 2.5vw;
+  /* height: 2.5vh; atm it will have the height of the content*/ 
   text-align:center;
 }
 
 .sidebar {
-    margin: 0;
+    margin-top: 4vh;
     padding: 0;
     width: 10vw;
     background-color: rgb(144, 25, 17);
     position: fixed;
-    height: 100%;
+    height: 96vh;
     overflow: auto;
   }
   
@@ -61,7 +56,7 @@ footer{
   }
   
   /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-  div.content {
+  .sidebar.content {
     margin-left: 10vw;
     padding: 1vw 2vw;
     height: 100%;
@@ -72,28 +67,65 @@ h1 {
   font-weight: 15vw;
 }
 
-
 /* ------------------ LIST OF CRANES --------------------*/
-.chooseCrane {
-    width: 30vw;
-    color: black;
-    background-color: pink;
-    text-align: center;
-    margin: 0 auto;
+body {
+  background: url(https://www.olsbergs.se/wp-content/themes/olsbergs/assets/img/olsbergs-pattern.png)
+    repeat #ebebeb;
+  /*background-color: rgb(144, 25, 17);*/
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+  overflow: hidden;
+  height: 100vh;
+} 
+
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
 }
 
-.wrapper {
-    background-color: white;
+.wrap {
+  padding-bottom: 2.5vh;
 }
 
+.grid {
+  background-color: pink;
+  padding-top: 4vh;
+  padding-left: 10vw;
+  
+  display: grid;
+  grid-template-rows: 20% 50% 30%;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas:
+  "topL top topR"
+  "middle middle middle"
+  "hej hej hej";
+}
+
+.title {
+  background-color: blue;
+  grid-area: middle;
+}
+
+.listOfCranes {
+  background-color:green;
+  grid-area: top;
+  
+}
+
+.blank {
+  background-color: purple;
+  grid-area: hej;
+}
 
 /*------------- THE DROP DOWN MENU ---------------------*/
 /* the top bar where the logo, "username" and "menu" is located */
-nav {
+
+/* nav {
   width: 100%;
   height: 4vw;
   /* background-color: white; */
-}
+} 
 
 #logo {
   float: left;
@@ -127,7 +159,8 @@ nav {
 }
 
 /* the dropdown box/"background" */
-nav ul li ul {
+/* nav */
+ul li ul {
   display: none;
   position: absolute;
   background-color: #fff; /* color of the dropdown */
@@ -138,12 +171,14 @@ nav ul li ul {
 }
 
 /*When you hover over the list we activate the "ul" within the list*/
-nav ul li:hover ul {
+/* nav */
+ul li:hover ul {
   display: block;
 }
 
 /* the dropdown list */
-nav ul li ul ul {
+/* nav */
+ul li ul ul {
   position: relative;
   width: 6.8vw; /* how wide the dropdown box is*/
   border-radius: 0.8vw;

@@ -8,41 +8,54 @@
     <title>Welcome to this webpage</title>
 </head>
 <body>
-    <header>
-        <nav>
+    
+    <div class="page-container">
+        <header>
             <img id="logo" src="https://www.olsbergs.se/wp-content/themes/olsbergs/assets/img/logo.svg">
-            <ul id ="topbar">
-                <li class= "GeneralTopBar"><a class="InGeneralTopBar" href="#">MENU</a>
-                    <ul id="dropdownmenu">
-                        <ul><a class="dropdownlist" href="#">myself</a></ul>
-                        <ul><a class="dropdownlist" href="#">yourself</a></ul>
-                        <ul><a class="dropdownlist" href="#">others</a></ul>
-                    </ul>
-                </li>
-                <li class= "GeneralTopBar"><a class="InGeneralTopBar" id="userName" href="#"> Here is your user name</a></li>
-                <!-- 
-                
-                <li><a href="#">Log out</a></li>
-                -->
-            </ul>
-        </nav>
-    </header>
-    <div class="sidebar">
-    <!-- Here we can create the log-in square -->
-        <a class="login">Log in to access this webpage:</a>
-        <a href="ManageCranes.html">Manage Cranes</a>
-        <a href="ManagePeople.html">Manage people</a>
+    
+            <!--<nav> -->
+                <ul id ="topbar">
+                    <li class= "GeneralTopBar"><a class="InGeneralTopBar" href="#">MENU</a>
+                        <ul id="dropdownmenu">
+                            <ul><a class="dropdownlist" href="#">Profile</a></ul>
+                            <ul><a class="dropdownlist" href="#">Log out</a></ul>
+                        </ul>
+                    </li>
+                    <li class= "GeneralTopBar"><p class="InGeneralTopBar" id="userName"> Here is your user name</p></li>
+                    <!-- 
+                    
+                    <li><a href="#">Log out</a></li>
+                    -->
+                </ul>
+            <!-- </nav> -->
+        </header>
+
+        <div class="wrap" id="">
+            <div class="sidebar">
+                <!-- Here we can create the log-in square -->
+                    <a class="login">Log in to access this webpage:</a>
+                    <a href="ManageCranes.html">Manage Cranes</a>
+                    <a href="ManagePeople.html">Manage people</a>
+            </div>
+
+
+            <div class="grid">
+                <div class="title"> Title</div>
+                <div class="listOfCranes">List</div>
+                <div class="blank">blank</div>
+            </div>
+            
+        </div>
+
+        <footer>
+            <div>Contact us </div>
+            <div>Information about Olsbergs </div> <!-- Link to Olsbergs home page-->
+
+        </footer>
+
     </div>
-<footer>
-    <p>Contact us </p>
-    <p>Information about Olsbergs </p> <!-- Link to Olsbergs home page-->
-</footer>
 </body>
 </html>
 
 
-<style scoped>
 
-   /* Har lagt in allt detta i separata style.css istället */
-
-</style>
