@@ -92,7 +92,7 @@ body {
   background-color: pink;
   padding-top: 4vh;
   padding-left: 10vw;
-  
+  height: 94vh;
   display: grid;
   grid-template-rows: 20% 50% 30%;
   grid-template-columns: 1fr 2fr 1fr;
