@@ -6,13 +6,12 @@
 }
 
 header {
-  /*background-color:grey;*/
+  background-color:white;
   padding: 1vw;
   color: black;
 }
 
-footer {
-  /*background-color: grey;*/
+footer { 
   color: black;
 }
 
@@ -73,25 +72,37 @@ h1 {
   font-weight: 15vw;
 }
 
-a {
-  text-decoration: none;
+
+/* ------------------ LIST OF CRANES --------------------*/
+.chooseCrane {
+    width: 30vw;
+    color: black;
+    background-color: pink;
+    text-align: center;
+    margin: 0 auto;
 }
+
+.wrapper {
+    background-color: white;
+}
+
 
 /*------------- THE DROP DOWN MENU ---------------------*/
 /* the top bar where the logo, "username" and "menu" is located */
 nav {
   width: 100%;
-  height: 5vw;
+  height: 4vw;
   /* background-color: white; */
 }
 
 #logo {
   float: left;
-  padding: 0.5vw 1vw;
+  padding: 0.8vw 2vw;
 }
 
 #topbar {
   float: right;
+  padding: 0.8vw 0vw;
 }
 
 /* The Top Bar list in genereal no matter what is in it*/
@@ -112,6 +123,7 @@ nav {
   font-size: 1.5vw;
   padding: 1vw 1vw; /* each object get padding around it (vertical horisontal) */
   /* text-decoration: none;  This is not needed */
+  text-decoration: none;
 }
 
 /* the dropdown box/"background" */
@@ -136,6 +148,10 @@ nav ul li ul ul {
   width: 6.8vw; /* how wide the dropdown box is*/
   border-radius: 0.8vw;
   padding: 0.5vw 0.1vw; /* padding between the (around each) objects*/
+}
+
+#userName {
+    font-size: 1vw;
 }
 
 /* The text objects in the dropdown-list*/
