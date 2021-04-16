@@ -25,7 +25,18 @@ body {
     "footer footer";
 }
 .grid{
-  height: 100%;
+  height: 50%;
+}
+.title{
+  background-color: lightblue;
+  height:100%
+}
+.grid2{
+  height: 50%;
+}
+.title2{
+  background-color:lightgreen;
+  height:100%;
 }
 
 header {
