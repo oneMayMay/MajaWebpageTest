@@ -1,5 +1,9 @@
 {
-    "Employee": {"1": "hej",
-                    "2": "nej"},
-    "crane": "crane"
+    "Employee": {
+        "1": "Peter",
+        "2": "Per",
+        "3": "Johan"},
+    "crane": {
+        "crane": "Crane 1",
+        "crane 2": "Crane 2"}
 }

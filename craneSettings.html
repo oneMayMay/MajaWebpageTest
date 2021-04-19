@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Welcome to this webpage</title>
 </head>
@@ -46,15 +47,26 @@
 
 
 <script type="text/javascript">
-var jsontest = {    // Här ska den riktiga JSONen laddas in
-    "Employee": {
-        "1": "Peter",
-        "2": "Per",
-        "3": "Johan"},
-    "crane": {
-        "crane": "Crane 1",
-        "crane 2": "Crane 2"}
-}
+// var jsontest = {    // Här ska den riktiga JSONen laddas in
+//     "Employee": {
+//         "1": "Peter",
+//         "2": "Per",
+//         "3": "Johan"},
+//     "crane": {
+//         "crane": "Crane 1",
+//         "crane 2": "Crane 2"}
+// }
+
+var jsontest = {};
+    $(document).ready(function(){
+        $.getJSON("testjson2.json", function(data){
+            jsontest = data;
+            console.log(data.Employee);
+        }).fail(function(){
+            console.log("An error has occurred.");
+        });
+    });
+
     var mainElement = document.getElementById("craneJSON");
     //var jsonVar = getJSON("testjson2.json");
     //console.log(jsonVar);
@@ -72,7 +84,7 @@ var jsontest = {    // Här ska den riktiga JSONen laddas in
     }
     //mainElement.innerHTML = JSON.stringify(jsontest, null, '\t');
     
-    mainElement.appendChild(document.createTextNode(jsontest.crane.crane));
+    //mainElement.appendChild(document.createTextNode(jsontest.crane.crane));
 
 
     // --------- SLIDER JS to have a value updated next to it --------- //
@@ -84,6 +96,7 @@ var jsontest = {    // Här ska den riktiga JSONen laddas in
     slider.oninput = function() {
         output.innerHTML = this.value;
     }
+
 
 </script>
 
