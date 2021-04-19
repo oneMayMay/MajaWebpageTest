@@ -45,46 +45,25 @@
 
 
 <script type="text/javascript">
-// var jsontest = {    // Här ska den riktiga JSONen laddas in
-//     "Employee": {
-//         "1": "Peter",
-//         "2": "Per",
-//         "3": "Johan"},
-//     "crane": {
-//         "crane": "Crane 1",
-//         "crane 2": "Crane 2"}
-// }
 
 
 var jsontest = {};
     $(document).ready(function(){
-        $.getJSON("testjson2.json", function(data){
-            jsontest = data;
-            console.log(data.Employee);
+        $.getJSON("testjson2.json", function(data){ //Denna laddar in JSON
+                                                    //May need to be parsed properly. Or turn into string/array
+            for (index = 1; index<=Object.keys(data).length; index++){
+                var testElement = document.getElementById("craneJSON");
+                var listItem = document.createElement("p");
+                var listCrane = document.createTextNode(data.Employee[index]);
+
+                listItem.appendChild(listCrane);
+                testElement.appendChild(listItem);
+            }
+            testElement.appendChild(document.createTextNode(data.crane.crane));
         }).fail(function(){
             console.log("An error has occurred.");
         });
     });
-
-    var mainElement = document.getElementById("craneJSON");
-    //var jsonVar = getJSON("testjson2.json");
-    //console.log(jsonVar);
-    //var strjson = JSON.stringify(jsonVar, null, 2);
-    var count = Object.keys(jsontest).length;    //Maybe possible to add length of child variable in JSON automatically
-                                                //May need to be parsed properly. Or turn into string/array
-    
-    for (index = 1; index<=count; index++){
-        var testElement = document.getElementById("craneJSON");
-        var listItem = document.createElement("p");
-        var listCrane = document.createTextNode(jsontest.Employee[index]);
-
-        listItem.appendChild(listCrane);
-        testElement.appendChild(listItem);
-    }
-    //mainElement.innerHTML = JSON.stringify(jsontest, null, '\t');
-    
-    //mainElement.appendChild(document.createTextNode(jsontest.crane.crane));
-
 
     // --------- SLIDER JS to have a value updated next to it --------- //
     var slider = document.getElementById("myRange");
@@ -95,7 +74,6 @@ var jsontest = {};
     slider.oninput = function() {
         output.innerHTML = this.value;
     }
-
 
 </script>
 
