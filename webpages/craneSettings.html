@@ -3,30 +3,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery-3.6.0.min.js"> </script>
+    <script>
+        $(function(){
+            $("#header").load("../commons/header.html"); 
+            $("#footer").load("../commons/footer.html");
+        })
+    </script>
+    <link rel="stylesheet" type="text/css" href="../style.css">
     <title>Welcome to this webpage</title>
+        
 </head>
 <body>
     <div class="page-container">
-        <header>
-            <img id="logo" src="https://www.olsbergs.se/wp-content/themes/olsbergs/assets/img/logo.svg">
-            <ul id ="topbar">
-                <li class= "GeneralTopBar"><a class="InGeneralTopBar" href="#">MENU</a>
-                    <ul id="dropdownmenu">
-                        <ul><a class="dropdownlist" href="#">Profile</a></ul>
-                        <ul><a class="dropdownlist" href="#">Log out</a></ul>
-                    </ul>
-                </li>
-                <li class= "GeneralTopBar"><p class="InGeneralTopBar" id="userName"> Here is your user name</p></li>
-            </ul>
-        </header>
+
+        <div id="header"></div>
+
         <div class="sidebar">
             <!-- Here we can create the log-in square -->
             <div>Go back to </div> <a href="index.html"> home page</a>
             <a href="ManageCranes.html">Manage Cranes</a>
             <a href="ManagePeople.html">Manage people</a>
         </div>
+
         <div class="wrap">
             <div id="craneJSON">
                 <div class="slidecontainer">
@@ -38,10 +37,9 @@
                 <div class="title2"></div>
             </div>
         </div>
-        <footer>
-            <p>Contact us </p>
-            <p>Information about Olsbergs </p> <!-- Link to Olsbergs home page-->
-        </footer>
+
+        <div id="footer"></div>
+        
     </div>
 </body>
 
@@ -56,6 +54,7 @@
 //         "crane": "Crane 1",
 //         "crane 2": "Crane 2"}
 // }
+
 
 var jsontest = {};
     $(document).ready(function(){

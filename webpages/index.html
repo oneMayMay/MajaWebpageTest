@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.6.0.min.js"> </script>
+    <script>
+        $(function(){
+            $("#header").load("header.html"); 
+            $("#footer").load("footer.html");
+        })
+    </script>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <title>Welcome to this webpage</title>
+</head>
+<body>
+    
+    <div class="page-container">
+        
+        <div id="header"></div>
+
+        <div class="sidebar">
+            <!-- Here we can create the log-in square -->
+                <a class="login">Log in to access this webpage:</a>
+                <a href="ManageCranes.html">Manage Cranes</a>
+                <a href="ManagePeople.html">Manage people</a>
+        </div>
+        <div class="wrap">
+            <div class="grid">
+                <div class="title"> Title</div>
+            </div>
+            <div class="grid2">
+                <div class="title2"> Title2</div>
+            </div>
+        </div>
+
+        <div id="footer"></div>
+    </div>
+</body>
+</html>
