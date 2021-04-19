@@ -7,48 +7,141 @@
     <title>Welcome to this webpage</title>
 </head>
 <body>
-    <header>
-        <img id="headpic" src="https://www.olsbergs.se/wp-content/themes/olsbergs/assets/img/logo.svg">
-        Welcome to Olsbergs applications for online crane monitoring
-    </header>
-    <div class="sidebar">
-        <!-- Here we can create the log-in square -->
-            <a class="goback">Go back</a>
+    <div class="page-container">
+        <header>
+            <img id="logo" src="https://www.olsbergs.se/wp-content/themes/olsbergs/assets/img/logo.svg">
+            <ul id ="topbar">
+                <li class= "GeneralTopBar"><a class="InGeneralTopBar" href="#">MENU</a>
+                    <ul id="dropdownmenu">
+                        <ul><a class="dropdownlist" href="#">Profile</a></ul>
+                        <ul><a class="dropdownlist" href="#">Log out</a></ul>
+                    </ul>
+                </li>
+                <li class= "GeneralTopBar"><p class="InGeneralTopBar" id="userName"> Here is your user name</p></li>
+            </ul>
+        </header>
+        <div class="sidebar">
+            <!-- Here we can create the log-in square -->
+            <div>Go back to </div> <a href="index.html"> home page</a>
             <a href="ManageCranes.html">Manage Cranes</a>
             <a href="ManagePeople.html">Manage people</a>
+        </div>
+        <div class="wrap">
+            <div id="craneJSON">
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                </div>
+                <div id="sliderValue"></div>
+            </div>
+            <div class="grid2">
+                <div class="title2"></div>
+            </div>
+        </div>
+        <footer>
+            <p>Contact us </p>
+            <p>Information about Olsbergs </p> <!-- Link to Olsbergs home page-->
+        </footer>
     </div>
-    <div id="craneJSON">
-
-    </div>
-    <footer>
-        <p>Contact us </p>
-        <p>Information about Olsbergs </p> <!-- Link to Olsbergs home page-->
-    </footer>
 </body>
 
 
 <script type="text/javascript">
-var jsontest = {    // Här ska den riktiga JSONEN laddas in
-    "Employee": {"1": "hej",
-                "2": "nej"},
-    "crane": "crane"
+var jsontest = {    // Här ska den riktiga JSONen laddas in
+    "Employee": {
+        "1": "Peter",
+        "2": "Per",
+        "3": "Johan"},
+    "crane": {
+        "crane": "Crane 1",
+        "crane 2": "Crane 2"}
 }
     var mainElement = document.getElementById("craneJSON");
     //var jsonVar = getJSON("testjson2.json");
     //console.log(jsonVar);
     //var strjson = JSON.stringify(jsonVar, null, 2);
-    //for (index = 0; index<=length.jsontest; i++){
-    //    var listItem = document.createElement("p");
-    //    var listValue = document.createTextNode("The " + index + " is " + jsontest)
-    //    listItem.appendChild(listValue)
-    //    mainElement.appendChild(listItem);
-    //}
-    mainElement.innerHTML = JSON.stringify(jsontest, null, '\t');
+    var count = Object.keys(jsontest).length;    //Maybe possible to add length of child variable in JSON automatically
+                                                //May need to be parsed properly. Or turn into string/array
+    
+    for (index = 1; index<=count; index++){
+        var testElement = document.getElementById("craneJSON");
+        var listItem = document.createElement("p");
+        var listCrane = document.createTextNode(jsontest.Employee[index]);
+
+        listItem.appendChild(listCrane);
+        testElement.appendChild(listItem);
+    }
+    //mainElement.innerHTML = JSON.stringify(jsontest, null, '\t');
+    
+    mainElement.appendChild(document.createTextNode(jsontest.crane.crane));
+
+
+    // --------- SLIDER JS to have a value updated next to it --------- //
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("sliderValue");
+    output.innerHTML = slider.value; // Display the default slider value
+
+        // Update the current slider value (each time you drag the slider handle)
+    slider.oninput = function() {
+        output.innerHTML = this.value;
+    }
+
 </script>
 
 <style scoped>
-    #craneJSON{
-        margin-left: 15vw;
-        color:black;
-    }
+#craneJSON{
+    color:black;
+    height: 50%;
+}
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+    padding-top: 10vw;
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;
+    width: 20%;
+    height: 1.2vw;
+    border-radius: 1.2vw;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 50%; 
+    background: rgb(144, 25, 17);;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 50%;
+    background: rgb(144, 25, 17);;
+    cursor: pointer;
+}
 </style>
+
+
+<!--
+    var slider = document.createElement('slider'+index);
+            slider.id = "myRange"+index;
+            slider.type = "range";
+            slider.min = 0;
+            slider.max = 100;
+            slider.value = 50;
+
+        var output = document.getElementById("sliderValue");
+        output.innerHTML = slider.value; // Display the default slider value
+
+        // Update the current slider value (each time you drag the slider handle)
+        slider.oninput = function() {
+            output.innerHTML = this.value;
+        }-->
