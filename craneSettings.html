@@ -45,21 +45,36 @@
 
 var jsontest = {};
     $(document).ready(function(){
-        $.getJSON("testjson2.json", function(data){ //Denna laddar in JSON
+        $.getJSON("testjson.json", function(data){  //Denna laddar in JSON
                                                     //May need to be parsed properly. Or turn into string/array
-            for (index = 1; index<=Object.keys(data).length; index++){
+                                                    //Kanske kan spara data med localStorage.setItem och sen retreive med localStorage.getItem
+            for (index = 1; index<=2;/*Object.keys(data).length;*/ index++){
                 var testElement = document.getElementById("craneJSON");
                 var listItem = document.createElement("p");
-                var listCrane = document.createTextNode(data.Employee[index]);
+                var listCrane = document.createTextNode(JSON.stringify(data.properties.desired.DA26.minpos.a));
 
                 listItem.appendChild(listCrane);
                 testElement.appendChild(listItem);
             }
-            testElement.appendChild(document.createTextNode(data.crane.crane));
+            // --------- SLIDER JS to have a value updated next to it --------- //
+            var slider = document.getElementById("myRange");
+            var output = document.getElementById("sliderValue");
+            output.innerHTML = slider.value; // Display the default slider value
+
+            // Update the current slider value (each time you drag the slider handle)
+            slider.oninput = function() {
+                output.innerHTML = this.value;
+                Number(data.properties.desired.DA26.minpos.a = this.value);
+                console.log(data.properties.desired.DA26.minpos);
+                testElement.appendChild(document.createTextNode(JSON.stringify(data.properties.desired.DA26.minpos.a)));
+            }
+            console.log(Object.keys(data.properties.desired));
         }).fail(function(){
             console.log("An error has occurred.");
         });
     });
+
+    //function replaceDataJSON(data)
 
     // --------- SLIDER JS to have a value updated next to it --------- //
     var slider = document.getElementById("myRange");
@@ -67,10 +82,9 @@ var jsontest = {};
     output.innerHTML = slider.value; // Display the default slider value
 
         // Update the current slider value (each time you drag the slider handle)
-    slider.oninput = function() {
-        output.innerHTML = this.value;
-    }
-
+    // slider.oninput = function() {
+    //     output.innerHTML = this.value;
+    // }
 </script>
 
 <style scoped>
@@ -81,6 +95,7 @@ var jsontest = {};
 .slidecontainer {
     width: 100%; /* Width of the outside container */
     padding-top: 10vw;
+    padding-bottom: 1vw;
 }
 
 /* The slider itself */
