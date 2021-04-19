@@ -37,6 +37,7 @@ body {
   background-color:lightgreen;
   height:100%;
 }
+/*
 header { 
   background-color:white;
   width: 100%;
@@ -46,6 +47,7 @@ header {
   position: sticky;
   top: 0;
 }
+*/
 
 #header { 
   background-color:white;
@@ -53,6 +55,8 @@ header {
   height: 100%;
   color: black;
   grid-area: header;
+  position: sticky;
+  top: 0;
 }
 
 .wrap{
@@ -62,6 +66,7 @@ header {
   grid-area: mainbody;
 }
 
+/*
 footer{
   color: black;
   background-color:white;
@@ -70,6 +75,7 @@ footer{
   text-align:center;
   grid-area: footer;
 }
+*/
 
 #footer{
   color: black;
