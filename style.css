@@ -85,8 +85,8 @@ footer{
   text-align:center;
   grid-area: footer;
 }
-
-.sidebar {
+/* .sidebar*/
+#sidebar {
   background-color: rgb(144, 25, 17);
   overflow: hidden;
   height:100%;
@@ -94,7 +94,8 @@ footer{
 }
   
   /* Sidebar links */
-  .sidebar a {
+  /* .sidebar*/
+#sidebar a {
     display: block;
     color: white;
     padding: 1vw;
@@ -102,19 +103,22 @@ footer{
   }
   
   /* Active/current link */
-  .sidebar a.active {
+  /* .sidebar*/
+#sidebar a.active {
     background-color: rgb(192, 38, 27);;
     color: white;
   }
   
   /* Links on mouse-over */
-  .sidebar a:hover:not(.active) {
+  /* .sidebar*/
+#sidebar a:hover:not(.active) {
     background-color: rgb(192, 38, 27);
     color: white;
   }
   
   /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-  .sidebar.content {
+  ./* .sidebar*/
+#sidebar.content {
     margin-left: 10vw;
     padding: 1vw 2vw;
     height: 100%;
