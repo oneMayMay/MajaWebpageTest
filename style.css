@@ -16,7 +16,7 @@ body {
 .page-container{
   display:grid;
   height:100vh;
-  grid-template-rows:5% 90% 5%;
+  grid-template-rows:9% 86% 5%;
   grid-template-columns:13% 87%;
   grid-template-areas: 
     "header header"
@@ -43,6 +43,8 @@ header {
   height: 100%;
   color: black;
   grid-area: header;
+  position: sticky;
+  top: 0;
 }
 .wrap{
   height:100%;
