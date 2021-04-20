@@ -22,7 +22,7 @@ body {
   grid-template-columns:25% 50% 25%;
   grid-template-areas: 
     "header header header"
-    "sidebar over overR"
+    "over over over"
     "sidebar mainbody sideR"
     "sidebar under underR"
     "footer footer footer";
@@ -98,6 +98,11 @@ body {
   grid-area: footer;
 }
 
+#sidebar {
+  grid-area: over;
+  background-color: lightgreen;
+}
+
 
 /* .sidebar*/
 /*
@@ -149,6 +154,7 @@ h1 {
   font-size: large;
   font-weight: 15vw;
 }
+
 
 
 /*------------- THE DROP DOWN MENU ---------------------*/
