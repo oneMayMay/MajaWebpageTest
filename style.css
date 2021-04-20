@@ -18,7 +18,7 @@ body {
 .page-container{
   display:grid;
   height:100vh;
-  grid-template-rows:10% 8% 57% 15% 10%;
+  grid-template-rows:10% 8% 7% 50% 15% 10%;
   grid-template-columns:25% 50% 25%;
   grid-template-areas: 
     "header header header"
@@ -35,7 +35,7 @@ body {
   display: grid;
   height:100%;
   grid-template-rows: 20% 20% 40% 20%;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-areas:
   "title"
   "row1"
@@ -226,6 +226,11 @@ ul li ul ul {
 }
 
 /*----------------- END OF DROP DOWN MENU --------------------*/
+
+#sidebar {
+  grid-area: nav;
+  background-color:rgb(144, 25, 17);
+}
 
   #navigationBar{
     list-style-type: none;
