@@ -8,8 +8,8 @@
 body {
   background: url(https://www.olsbergs.se/wp-content/themes/olsbergs/assets/img/olsbergs-pattern.png)
     repeat #ebebeb;
+    background-size: 25vw;
   /*background-color: rgb(144, 25, 17);*/
-  color: white;
   font-family: "Source Sans Pro", sans-serif;
   height: 100vh;
 }
@@ -18,7 +18,7 @@ body {
 .page-container{
   display:grid;
   height:100vh;
-  grid-template-rows:10% 8% 7% 50% 15% 10%;
+  grid-template-rows:10% 8% 7% 57% 8% 10%;
   grid-template-columns:25% 50% 25%;
   grid-template-areas: 
     "header header header"
@@ -34,7 +34,7 @@ body {
 .grid {
   display: grid;
   height:100%;
-  grid-template-rows: 20% 20% 40% 20%;
+  grid-template-rows: 20% 12% 48% 20%;
   grid-template-columns: 1fr;
   grid-template-areas:
   "title"
@@ -43,6 +43,9 @@ body {
   "row3";
 }
 
+.wrap {
+  font-size: 1.2vw;
+}
 
 .title {
   background-color: lightblue;
@@ -87,6 +90,7 @@ body {
 
 #footer{
   color: black;
+  font-size: 1.5vw;
   background-color:white;
   bottom: 0;
   width: 100%;
@@ -153,6 +157,7 @@ h1 {
 #logo {
   float: left;
   padding: 0.8vw 2vw;
+  height: 3.2vw;
   /* max-height: ;*/
 }
 
@@ -217,6 +222,7 @@ ul li ul ul {
 .dropdownlist {
   text-decoration: none;
   color: black;
+  font-size: 1.4vw;
   padding: 0.5vw 0.8vw; /* the padding around each text-item in the dropdown*/
 }
 
@@ -264,6 +270,7 @@ ul li ul ul {
   #navigationBar a {
     text-align: center;
     color: white;
+    font-size: 1.5vw;
     padding: 1vw;
     text-decoration: none;
   }
@@ -273,8 +280,49 @@ ul li ul ul {
   }
 
   /* ------------- different screen widths ----------------- */
-  @media only screen and (min-width: 1100px) {
+  /* On a screen that is less than 1000px wide, the grid will have smaller sides*/
+  @media only screen and (max-width: 1000px) {
+    .page-container{
+      display:grid;
+      height:100vh;
+      grid-template-rows: 8% 10% 5% 62% 5% 10%;
+      grid-template-columns:10% 80% 10%;
+      grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "over over over"
+        "sideL mainbody sideR"
+        "sideL under underR"
+        "footer footer footer";
+    }
 
+    .wrap{
+      font-size: 4vw;
+    }
+
+    #logo{
+      height: 5vh;
+    }
+
+    .InGeneralTopBar{
+      font-size: 5vw;
+    }
+
+    #userName{
+      font-size: 3vw;
+    }
+
+    .dropdownlist{
+      font-size: 4vw;
+    }
+
+    #navigationBar a{
+      font-size: 4vw;
+    }
+
+    #footer{
+      font-size: 4vw;
+    }
   }
 
   /* On screens that are less than 700px wide, make the sidebar into a topbar 
