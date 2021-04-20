@@ -13,42 +13,65 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   height: 100vh;
 }
+
+/*The outer grid whithin which the whole webpage is*/
 .page-container{
   display:grid;
   height:100vh;
-  grid-template-rows:9% 86% 5%;
-  grid-template-columns:13% 87%;
+  grid-template-rows:10% 15% 50% 15% 10%;
+  grid-template-columns:25% 50% 25%;
   grid-template-areas: 
-    "header header"
-    "sidebar mainbody"
-    "footer footer";
+    "header header header"
+    "sidebar over overR"
+    "sidebar mainbody sideR"
+    "sidebar under underR"
+    "footer footer footer";
 }
+/*
 .grid{
   height: 50%;
 }
-.title{
-  background-color: lightblue;
-  height:100%
-}
-.grid2{
-  height: 50%;
-}
-.title2{
-  background-color:lightgreen;
-  height:100%;
-}
-/*
-header { 
-  background-color:white;
-  width: 100%;
-  height: 100%;
-  color: black;
-  grid-area: header;
-  position: sticky;
-  top: 0;
-}
 */
 
+/* ---------------- End of outer grid -------------*/
+/* ---------------- Inner grid ---------------------*/
+.grid {
+  display: grid;
+  height:100%;
+  grid-template-rows: 20% 20% 40% 20%;
+  grid-template-columns: ;
+  grid-template-areas:
+  "title"
+  "row1"
+  "row2"
+  "row3";
+}
+
+
+.title {
+  background-color: lightblue;
+  height:100%;
+  grid-area: title;
+}
+
+.search {
+  background-color: lightpink;
+  height: 100%;
+  grid-area: row1;
+}
+.list {
+  background-color:lightgreen;
+  height: 100%;
+  grid-area: row2;
+}
+
+.botton {
+  background-color: lightsalmon;
+  height: 100%;
+  grid-area: row3;
+}
+
+/* ------------- Content in on the webpage -------------------*/
 #header { 
   background-color:white;
   width: 100%;
@@ -65,17 +88,6 @@ header {
   text-align: center;
   grid-area: mainbody;
 }
-
-/*
-footer{
-  color: black;
-  background-color:white;
-  bottom: 0;
-  width: 100%;
-  text-align:center;
-  grid-area: footer;
-}
-*/
 
 #footer{
   color: black;
@@ -117,7 +129,7 @@ footer{
   }
   
   /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-  ./* .sidebar*/
+  /* .sidebar*/
 #sidebar.content {
     margin-left: 10vw;
     padding: 1vw 2vw;
