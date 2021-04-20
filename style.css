@@ -18,7 +18,7 @@ body {
 .page-container{
   display:grid;
   height:100vh;
-  grid-template-rows:10% 15% 50% 15% 10%;
+  grid-template-rows:10% 8% 57% 15% 10%;
   grid-template-columns:25% 50% 25%;
   grid-template-areas: 
     "header header header"
@@ -97,12 +97,6 @@ body {
   text-align:center;
   grid-area: footer;
 }
-
-#sidebar {
-  grid-area: over;
-  background-color: lightgreen;
-}
-
 
 /* .sidebar*/
 /*
@@ -185,7 +179,7 @@ h1 {
   font-family: arial;
   color: #222;
   font-weight: bold;
-  font-size: 1.5vw;
+  font-size: 1.4vw;
   padding: 1vw 1vw; /* each object get padding around it (vertical horisontal) */
   /* text-decoration: none;  This is not needed */
   text-decoration: none;
@@ -225,7 +219,7 @@ ul li ul ul {
 /* The text objects in the dropdown-list*/
 .dropdownlist {
   text-decoration: none;
-  color: #222;
+  color: black;
   padding: 0.5vw 0.8vw; /* the padding around each text-item in the dropdown*/
 }
 
@@ -256,15 +250,24 @@ ul li ul ul {
     }
   }
 
+  #sidebar {
+    grid-area: over;
+    background-color:rgb(144, 25, 17);
+  }
+
   #navigationBar{
     list-style-type: none;
     margin: 0; 
     padding: 0;
+    padding-top: 1vw
+
   }  
+
   #navBar{
   display: inline; 
-  text-align: left;
-  margin-right: 4vw;
+  text-align: center;
+ margin-right: 3vw;
+ margin-left: 3vw;
   }
 
   /* Links on mouse-over */
@@ -273,14 +276,16 @@ ul li ul ul {
     color:white;
   }
 
+  /*
   #navigationBar.content {
     margin-right: 10vw;
     padding: 1vw 2vw;
     height: 100%;
   }
+  */
 
   #navigationBar a {
-    text-align: left;
+    text-align: center;
     color: white;
     padding: 1vw;
     text-decoration: none;
