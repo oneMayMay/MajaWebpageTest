@@ -19,7 +19,7 @@ body {
   display:grid;
   height:100vh;
   grid-template-rows: 6.5% 6% 4% 71.5% 4% 8%;
-  grid-template-columns:6% 88% 6%;
+  grid-template-columns:6vw 88vw 6vw;
   grid-template-areas: 
     "header header header"
     "nav nav nav"
@@ -37,35 +37,29 @@ body {
   grid-template-rows: 7% 6% 87%;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
-  "title title title"
-  "subt subt subt"
+  "titleL titleM titleR"
+  "subtL subtM subtR"
   "contentL contentM contentR";
 }
 
 .title {
   background-color: lightblue;
   height:100%;
-  font-size: 4vw;
+  font-size: 4vh;
   font-weight: bold;
-  grid-area: title;
+  grid-area: titleM;
 }
 
 .subheading {
   background-color: lightpink;
   height: 100%;
-  font-size: 3vw;
-  grid-area: subt;
+  font-size: 3vh;
+  grid-area: subtM;
 }
 .content {
   background-color:lightgreen;
   height: 100%;
   grid-area: contentM;
-}
-
-.botton {
-  background-color: lightsalmon;
-  height: 100%;
-  grid-area: bottonM;
 }
 
 /* ------------- Content in on the webpage -------------------*/
@@ -103,7 +97,7 @@ body {
 #logo {
   float: left;
   padding: 0.8vw 2vw;
-  height: 3.2vw;
+  height: 4.5vh;
   /* max-height: ;*/
 }
 
@@ -188,8 +182,7 @@ ul li ul ul {
     list-style-type: none;
     margin: 0; 
     padding: 0;
-    padding-top: 1vw
-
+    padding-top: 1vw;
   }  
 
   #navBar{
@@ -216,13 +209,53 @@ ul li ul ul {
   #navigationBar a {
     text-align: center;
     color: white;
-    font-size: 1.5vw;
+    font-size: 2vh;
     padding: 1vw;
     text-decoration: none;
   }
 
   #topbar{
     background-color: rgb(144, 25, 17);
+  }
+
+  /* ------ LOG IN PAGE ------------*/
+  .accessLevels {
+    padding: 1% 3%;
+    background-color: green;
+    text-decoration: none;
+    color: black;
+    font-size: 5vh;
+    border-style: solid;
+  }
+
+  .accessLevels:hover {
+    background-color: white;
+  }
+
+  #listAccess {
+    margin: 10px;
+  }
+
+  #login {
+    grid-area: titleM;
+  }
+
+  #chooseAccess {
+    grid-area: subtM
+  }
+
+  /* ---------- CHANGE CRANE ------------*/
+  .craneNames {
+    padding: 1% 3%;
+    background-color: green;
+    text-decoration: none;
+    color: black;
+    font-size: 5vh;
+    border-style: solid;
+  }
+
+  .craneNames:hover {
+    background-color: white;
   }
 
   /* ------------- different screen widths ----------------- */
