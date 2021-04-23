@@ -18,8 +18,8 @@ body {
 .page-container{
   display:grid;
   height:100vh;
-  grid-template-rows:10% 8% 7% 57% 8% 10%;
-  grid-template-columns:25% 50% 25%;
+  grid-template-rows: 6.5% 6% 4% 71.5% 4% 8%;
+  grid-template-columns:6% 88% 6%;
   grid-template-areas: 
     "header header header"
     "nav nav nav"
@@ -34,40 +34,38 @@ body {
 .grid {
   display: grid;
   height:100%;
-  grid-template-rows: 20% 12% 48% 20%;
-  grid-template-columns: 1fr;
+  grid-template-rows: 7% 6% 87%;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
-  "title"
-  "row1"
-  "row2"
-  "row3";
-}
-
-.wrap {
-  font-size: 1.2vw;
+  "title title title"
+  "subt subt subt"
+  "contentL contentM contentR";
 }
 
 .title {
   background-color: lightblue;
   height:100%;
+  font-size: 4vw;
+  font-weight: bold;
   grid-area: title;
 }
 
-.search {
+.subheading {
   background-color: lightpink;
   height: 100%;
-  grid-area: row1;
+  font-size: 3vw;
+  grid-area: subt;
 }
-.list {
+.content {
   background-color:lightgreen;
   height: 100%;
-  grid-area: row2;
+  grid-area: contentM;
 }
 
 .botton {
   background-color: lightsalmon;
   height: 100%;
-  grid-area: row3;
+  grid-area: bottonM;
 }
 
 /* ------------- Content in on the webpage -------------------*/
@@ -91,64 +89,12 @@ body {
 #footer{
   color: black;
   font-size: 1.5vw;
-  background-color:white;
+  background-color: rgb(144, 25, 17);/* white;*/
   bottom: 0;
   width: 100%;
   text-align:center;
   grid-area: footer;
 }
-
-/* .sidebar*/
-/*
-#sidebar {
-  background-color: rgb(144, 25, 17);
-  overflow: hidden;
-  height:100%;
-  grid-area: sidebar;
-}
-  
-  /* Sidebar links */
-  /* .sidebar*/
-  /*
-#sidebar a {
-    display: block;
-    color: white;
-    padding: 1vw;
-    text-decoration: none;
-  }
-  
-  /* Active/current link */
-  /* .sidebar*/
-
-  /*
-#sidebar a.active {
-    background-color: rgb(192, 38, 27);;
-    color: white;
-  }
-  
-  
-  /* Links on mouse-over */
-  /* .sidebar*/
-  /*
-#sidebar a:hover:not(.active) {
-    background-color: rgb(192, 38, 27);
-    color: white;
-  }
-  
-  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-  /* .sidebar*/
-  /*
-#sidebar.content {
-    margin-left: 10vw;
-    padding: 1vw 2vw;
-    height: 100%;
-  }
-
-h1 {
-  font-size: large;
-  font-weight: 15vw;
-}
-
 
 
 /*------------- THE DROP DOWN MENU ---------------------*/
@@ -281,7 +227,7 @@ ul li ul ul {
 
   /* ------------- different screen widths ----------------- */
   /* On a screen that is less than 1000px wide, the grid will have smaller sides*/
-  @media only screen and (max-width: 1000px) {
+   /* @media only screen and (max-width: 1000px) { 
     .page-container{
       display:grid;
       height:100vh;
@@ -324,6 +270,8 @@ ul li ul ul {
       font-size: 4vw;
     }
   }
+  */
+  
 
   /* On screens that are less than 700px wide, make the sidebar into a topbar 
 @media screen and (max-width: 700px) {
@@ -346,3 +294,56 @@ ul li ul ul {
     }
   }
   */
+
+  
+/* .sidebar*/
+/*
+#sidebar {
+  background-color: rgb(144, 25, 17);
+  overflow: hidden;
+  height:100%;
+  grid-area: sidebar;
+}
+  
+  /* Sidebar links */
+  /* .sidebar*/
+  /*
+#sidebar a {
+    display: block;
+    color: white;
+    padding: 1vw;
+    text-decoration: none;
+  }
+  
+  /* Active/current link */
+  /* .sidebar*/
+
+  /*
+#sidebar a.active {
+    background-color: rgb(192, 38, 27);;
+    color: white;
+  }
+  
+  
+  /* Links on mouse-over */
+  /* .sidebar*/
+  /*
+#sidebar a:hover:not(.active) {
+    background-color: rgb(192, 38, 27);
+    color: white;
+  }
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  /* .sidebar*/
+  /*
+#sidebar.content {
+    margin-left: 10vw;
+    padding: 1vw 2vw;
+    height: 100%;
+  }
+
+h1 {
+  font-size: large;
+  font-weight: 15vw;
+}
+
