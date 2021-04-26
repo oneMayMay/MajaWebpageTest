@@ -385,4 +385,129 @@ h1 {
   font-size: large;
   font-weight: 15vw;
 }
+*/
+
+/*SpeedButtons Preset*/
+
+.presetButtonSpeed label{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 14px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.presetButtonSpeed label:hover {
+  background-color: #60c463 /* When you hover the text gets grey around it*/
+  /* margin-right: 100vw;*/
+}
+
+.presetButtonSpeed:focus {
+  background-color: #89d18b ; 
+}
+
+.presetButtonSpeed input[type="radio"] {
+  opacity: 0;
+}
+
+.presetButtonSpeed input[type="radio"]:checked+label,
+.Checked+label {
+  background-color: #89d18b ; 
+}
+
+
+/* PresetButtons Hardness*/
+
+.presetButtonHardness label{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 14px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.presetButtonHardness label:hover {
+  background-color: #60c463 /* When you hover the text gets grey around it*/
+  /* margin-right: 100vw;*/
+}
+
+.presetButtonHardness:focus {
+  background-color: #89d18b ; 
+}
+
+.presetButtonHardness input[type="radio"] {
+  opacity: 0;
+}
+
+.presetButtonHardness input[type="radio"]:checked+label,
+.Checked+label {
+  background-color: #89d18b ; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+#presetButtonHard{
+  background-color: #4CAF50; /* Green */
+/*
+  border: none;
+  color: white;
+  padding: 14px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+
+
+#presetButtonHard label:hover {
+  background-color: #60c463 /* When you hover the text gets grey around it*/
+  /* margin-right: 100vw;*/
+  /*
+}
+
+#presetButtonHard label:focus {
+  background-color: #89d18b ; 
+}
+*/
+
+
+#addPresetButton{
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 14px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 
