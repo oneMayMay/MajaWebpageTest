@@ -466,3 +466,18 @@ h1 {
   background-color: #60c463 
 }
 
+#choosePresetButton{
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 14px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#choosePresetButton:hover {
+  background-color: #60c463 
+}
+
