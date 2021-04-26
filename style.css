@@ -451,55 +451,6 @@ h1 {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-#presetButtonHard{
-  background-color: #4CAF50; /* Green */
-/*
-  border: none;
-  color: white;
-  padding: 14px 30px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
-
-
-
-#presetButtonHard label:hover {
-  background-color: #60c463 /* When you hover the text gets grey around it*/
-  /* margin-right: 100vw;*/
-  /*
-}
-
-#presetButtonHard label:focus {
-  background-color: #89d18b ; 
-}
-*/
-
-
 #addPresetButton{
   background-color: #4CAF50; 
   border: none;
@@ -509,5 +460,9 @@ h1 {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+#addPresetButton:hover {
+  background-color: #60c463 
 }
 

@@ -62,11 +62,14 @@
                     </p>
                     </div>
                 -->
-                    <p>Your Presets: </p>
-                    <p><button id= "addPresetButton" type="button"> + Add preset </button></p>
-                    <p>
-                    </p>
-                    <p> <button id= "choosePresetBuutton" type= "button"> Choose these presets</button> </p>
+                    <h3>Your Presets: </h3>
+                    <p><a id= "addPresetButton" href="allParametersDriver.html">+ Add Preset</a></p>
+                    
+                    <div> <button id= "choosePresetButton" type= "button"> Choose these presets</button> </div>
+                    
+                    <div id="resultSpeed"></div>
+                    <div id="resultHardness"></div>
+
 
                 </div>
 
@@ -77,3 +80,25 @@
     </div>
 </body>
 </html>
+
+<script>
+var choosePresetButton = document.getElementById('choosePresetButton');
+
+choosePresetButton.onclick= function(){
+        var elementSpeed = document.getElementsByName('speed');
+          
+        for(i = 0; i < elementSpeed.length; i++) {
+            if(elementSpeed[i].checked)
+            document.getElementById("resultSpeed").innerHTML
+                    = "Speed: "+elementSpeed[i].value;
+        }
+
+        var elementHardness = document.getElementsByName('hardness');
+          
+        for(i = 0; i < elementHardness.length; i++) {
+            if(elementHardness[i].checked)
+            document.getElementById("resultHardness").innerHTML
+                    = "Hardness: "+elementHardness[i].value;
+        }
+    }
+</script>
