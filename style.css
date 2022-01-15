@@ -402,7 +402,7 @@ h1 {
 
 .presetButtonSpeed label:hover {
   background-color: #60c463 /* When you hover the text gets grey around it*/
-  /* margin-right: 100vw;*/
+  /* margin-right: 50vw ;*/
 }
 
 .presetButtonSpeed:focus {
